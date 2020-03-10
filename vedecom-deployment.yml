@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Vedecom-deployment
+  labels:
+    app: Vedecom-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: Vedecom-pod
+      app: Vedecom-app
+  template:
+    metadata:
+      name: Vedecom-pod
+      labels:
+        name: Vedecom-pod
+        app: Vedecom-app
+
+   spec:
+      containers:
+        - name: Vedecom-openc2x
+          image: aris3/openc2x_docker:v1
+          ports:
+            - containerPort: 80
+
+
+
