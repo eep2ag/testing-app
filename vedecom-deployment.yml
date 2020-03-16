@@ -22,7 +22,7 @@ spec:
         - name: Vedecom-openc2x
           image: aris3/openc2x_docker:v1
           ports:
-            - containerPort: 80
+          - containerPort: 80
 
 
 
