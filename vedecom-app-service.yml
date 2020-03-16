@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: Vedecom-service
+  name: vedecom-service
   labels:
-    name: Vedecom-service
-    app: Vedecom-app
+    name: vedecom-service
+    app: vedecom-app
 spec:
   type: LoadBalancer
   ports:
   - port: 80
     targetPort: 80
   selector:
-    name: Vedecom-pod
-    app: Vedecom-app
+    name: vedecom-pod
+    app: vedecom-app
 
