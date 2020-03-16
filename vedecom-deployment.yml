@@ -16,7 +16,6 @@ spec:
       labels:
         name: vedecom-pod
         app: vedecom-app
-
    spec:
       containers:
         - name: vedecom-openc2x
