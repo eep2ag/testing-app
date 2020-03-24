@@ -9,5 +9,7 @@ spec:
   containers:
   - name: vedecom-openc2x
     image: aris3/openc2x_docker:v1
+    command:  ["sleep"]
+    args: ["infinity"]
     ports:
     - containerPort: 80
