@@ -1,0 +1,33 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: example
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: vedecom-service1
+          servicePort: 1188
+        path: /my_mac
+      - backend:
+          serviceName: vedecom-service1
+          servicePort: 1188
+        path: /request_cam
+      - backend:
+          serviceName: vedecom-service1
+          servicePort: 1188
+        path: /request_denm
+      - backend:
+          serviceName: vedecom-service1
+          servicePort: 1188
+        path: /trigger_denm
+      - backend:
+          serviceName: vedecom-service1
+          servicePort: 1188
+        path: /request_dccinfo
+      - backend:
+          serviceName: vedecom-service1
+          servicePort: 80
+        path: /

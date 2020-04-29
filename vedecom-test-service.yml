@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vedecom-service1
+  labels:
+    name: vedecom-service1
+    app: vedecom-app
+spec:
+  type: NodePort
+  ports:
+  - name: web
+    port: 80
+    targetPort: 80
+  - name: app
+    port: 1188
+    targetPort: 1188
+  selector:
+    name: vedecom-pod
+    app: vedecom-app
